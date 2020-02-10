@@ -50,8 +50,36 @@ nav[3].textContent = siteContent["nav"]["nav-item-4"];
 nav[4].textContent = siteContent["nav"]["nav-item-5"];
 nav[5].textContent = siteContent["nav"]["nav-item-6"];
 
+let links = document.querySelectorAll('a');
+links.forEach(link => {
+  link.style.color = 'green'
+});
+
+const gitLink = document.createElement('a');
+gitLink.textContent = "GITHUB";
+
+gitLink.style.color = 'red';
+gitLink.style.fontSize = '2rem';
+
+
+gitLink.setAttribute('href', 'https://github.com/danielkyman/DOM-I');
+
+const navAddTwo = document.createElement('a');
+navAddTwo.textContent = "TEST_P"
+
+const parentElement = document.querySelector('nav');
+parentElement.appendChild(gitLink);
+
+const newParentElement = document.querySelector('nav');
+newParentElement.prepend(navAddTwo);
+
+// const newNewParentElement = document.querySelector('a');
+// newNewParentElement.append(navAdd);
+
+
 let hOne = document.querySelector('h1');
 hOne.textContent = siteContent["cta"]["h1"];
+
 
 let button = document.querySelector('button');
 button.textContent = siteContent["cta"]["button"];
@@ -80,4 +108,10 @@ p[8].textContent = siteContent["footer"]["copyright"];
 
 let middleImg = document.querySelector('.middle-img');
 middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+
+//stretch styling
+
+// p[0].style.backgroundColor = 'red';
+// p[1].style.backgroundColor = 'blue';
+// p[2].style.backgroundColor = 'green';
 
